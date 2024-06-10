@@ -10,6 +10,3 @@ jobs:
       - run:
           name: Run Playwright specs
           command: npm run test
-  build:
-    jobs:
-      - build
