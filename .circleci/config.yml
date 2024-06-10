@@ -1,8 +1,10 @@
 version: 2.1
+orbs:
+  circleci-cli: circleci/circleci-cli@0.1.9
 jobs:
   build:
     docker:
-      - image: mcr.microsoft.com/playwright:v1.29.0-focal
+      - image: mcr.microsoft.com/playwright:v1.40.0-jammy
     working_directory: ~/app
     steps:
       - checkout
