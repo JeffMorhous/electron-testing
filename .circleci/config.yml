@@ -1,14 +1,14 @@
 version: 2.1
-
 jobs:
-  build:
+  run-test:
     docker:
-      - image: cimg/node:14.15.0-browsers
-    working_directory: ~/repo
+      - image: mcr.microsoft.com/playwright:v1.23.1-focal
+    # Steps to the job
     steps:
       - checkout
-      - run: npm install
-      - run: npx playwright install --with-deps chromium
+      - run: npm i -D @playwright/test
+      - run: npx playwright install
+      - run: npx playwright install chrome
       - run:
           name: Run Playwright specs
           command: npm run test
