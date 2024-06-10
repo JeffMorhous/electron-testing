@@ -5,7 +5,7 @@ test('an h1 contains hello world"', async () => {
 
   // Wait for the first BrowserWindow to open
   const window = await electronApp.firstWindow()
-
+  //
   // Check for the presence of an h1 element with the text "hello"
   const headerElement = await window.$('h1')
   const headerText = await headerElement.textContent()
