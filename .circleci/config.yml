@@ -8,7 +8,7 @@ version: 2.1
        - checkout
        - run: npm install
        - run:
-           name: "Run Playwright specs"
+           name: Run Playwright specs
            command: npm run test
    build:
      jobs:
